@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+void printOdd(int size) {
+    if(size<=0) {
+        return;
+    }
+    
+    if(size%2!=0) {
+        cout<<size<<endl;
+    }
+	printOdd(size-1);
+}
+
+void printEven(int size) {
+    if (size<=0) {
+        return;
+    }
+    printEven(size-1);
+    if (size%2==0) {
+        cout<<size<<endl;
+    }
+	
+}
+
+int main() {
+    int size;
+    cin>>size;
+    printOdd(size);
+    printEven(size);
+
+    return 0;
+}
